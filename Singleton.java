@@ -38,7 +38,8 @@ public final class Singleton implements Cloneable, Serializable {
 //		return super.clone();
 		throw new CloneNotSupportedException("Singleton class cannot be cloneable");
 	}
-	
+
+// 	This method is added to prevent the single design pattern breakage during the serialization process or in distributed system
 	public Object readResolve() {
 		return getInstance(); 
 	}
