@@ -122,7 +122,7 @@ public class SingletonMain {
 ////		Did some business processing
 //	}
 
-//	Breaking Singleton using Serializable or in distributed system but added the readResolve method
+//	Breaking Singleton using Serializable or in distributed system but added the readResolve method to the singleton class to prevent the breakage
 	public static void main(String[] args) throws IOException {
 
 		ObjectOutput objectOutput = null;
@@ -159,6 +159,6 @@ public class SingletonMain {
 		
 //		Output of the above code is
 //		hash code of singleton class is 466002798
-//		hash code of singleton class is 591137559
+//  		hash code of singleton class is 466002798
 	}
 }
